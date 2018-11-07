@@ -102,7 +102,7 @@ module XCTask
     def build_watchos_framework
       framework_paths = []
       framework_paths << build_framework('watchos')
-      framework_paths << build_framework('watchsimulator', '"platform=watchOS Simulator,OS=5.0,name=Apple Watch Series 3 - 42mm"')
+      framework_paths << build_framework('watchsimulator', '"platform=watchOS Simulator,OS=4.2,name=Apple Watch Series 3 - 42mm"')
       final_path = final_framework_path
 
       system("rm -rf #{final_path} && cp -R #{framework_paths[0]} #{final_path}")
