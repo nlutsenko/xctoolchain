@@ -127,7 +127,7 @@ module XCTask
     def build_tvos_framework
       framework_paths = []
       framework_paths << build_framework('appletvos')
-      framework_paths << build_framework('appletvsimulator', '"platform=tvOS Simulator,OS=13.2.2,name=Apple TV 4K"')
+      framework_paths << build_framework('appletvsimulator', '"platform=tvOS Simulator,OS=13.2,name=Apple TV 4K"')
       final_path = final_framework_path
 
       system("rm -rf #{final_path} && cp -R #{framework_paths[0]} #{final_path}")
